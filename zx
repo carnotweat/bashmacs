@@ -10,11 +10,11 @@ if [[ $socket_file == "" ]]; then
     # note that emacsclient doesn't fix these args for you either
     # when using -a / --alternate-editor
 
-  #   if [ -n "$DISPLAY" ]; then
-	# emacs "$1" &
-	# else
-  # 	emacs "$1"
-  #   fi
+    if [ -n "$DISPLAY" ]; then
+	emacs "$1" &
+	else
+  	emacs "$1"
+    fi
 
 else
 
